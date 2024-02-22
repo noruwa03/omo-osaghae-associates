@@ -144,7 +144,7 @@ const delPost = (val: any) => {
                     </svg>
 
                     <RouterLink
-                      :to="{ name: 'Property', params: { slug: data.id } }"
+                      :to="{ name: 'Edit', params: { slug: data.id } }"
                       class="hover:text-green-600 font-medium"
                     >
                       View

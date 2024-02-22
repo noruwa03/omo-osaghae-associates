@@ -9,6 +9,7 @@ import AdminPageVue from "../pages/Admin/Admin.vue";
 import CreatePageVue from "../pages/Admin/Create.vue";
 import EditVue from "../pages/EditPage/Edit.vue";
 import PropertyPageVue from "../pages/PropertyPage.vue";
+import NotFoundPageVue from "../pages/NotFoundPage.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -44,6 +45,11 @@ const routes: Array<RouteRecordRaw> = [
         path: "signin",
         component: SigninPageVue,
       },
+      {
+        name: "NotFound",
+        path: "/:catchAll(.*)",
+        component: NotFoundPageVue
+      }
     ],
   },
   {

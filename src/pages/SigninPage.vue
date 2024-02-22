@@ -12,7 +12,7 @@ useHead({
     {
       name: "Signin Page for Omo Osaghae Associate",
       content: "This is the signin page",
-      description: "lorem",
+      description: "Sign in for Admin",
     },
   ],
 });

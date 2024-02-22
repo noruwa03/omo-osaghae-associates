@@ -160,6 +160,35 @@ const closeError = () => {
               v-model="postContent.propertyTitle"
             />
 
+              <label for="Price" class="text-slate-700 text-sm">Price</label>
+          <input
+            type="text"
+            id="Price"
+            class="outline-none border-[1px] border-gray-100 focus:border-green-400 px-4 py-2 rounded-lg w-full mb-8 mt-2 placeholder:text-slate-500 placeholder:font-serif placeholder:font-normal placeholder:text-sm text-base text-slate-700"
+            v-model="postContent.price"
+          />
+
+          <div className="grid grid-cols-4 gap-4 mb-8">
+            <div className="lg:col-span-2 col-span-4">
+              <label for="Longitude" className="text-sm"> Longitude (X) </label>
+              <input
+                type="text"
+                id="Longitude"
+                class="outline-none border-[1px] border-gray-100 focus:border-green-400 px-4 py-2 rounded-lg w-full mb-4 mt-2 placeholder:text-slate-500 placeholder:font-serif placeholder:font-normal placeholder:text-sm text-base text-slate-700"
+                v-model="postContent.longitude"
+              />
+            </div>
+            <div className="lg:col-span-2 col-span-4">
+              <label for="Latitude" className="text-sm"> Latitude (Y) </label>
+              <input
+                type="text"
+                id="Latitude"
+                class="outline-none border-[1px] border-gray-100 focus:border-green-400 px-4 py-2 rounded-lg w-full mb-4 mt-2 placeholder:text-slate-500 placeholder:font-serif placeholder:font-normal placeholder:text-sm text-base text-slate-700"
+                v-model="postContent.latitude"
+              />
+            </div>
+          </div>
+
             <QuillEditor
               toolbar="full"
               theme="snow"

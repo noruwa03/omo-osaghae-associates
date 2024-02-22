@@ -88,8 +88,8 @@ export const usePost = defineStore("post", () => {
   };
 
   const GETFOURPOSTONLY = computed(() => {
-    return state.value.data.slice(0, 4)
-  })
+    return state.value.data.slice(0, 4);
+  });
 
   const GETPROPERTYPOST = async (payload: string | string[] | any) => {
     state.value.loading = true;
@@ -224,6 +224,9 @@ export const usePost = defineStore("post", () => {
 
               updateDoc(docRef, {
                 propertyTitle: payload.propertyTitle,
+                price: payload.price,
+                longitude: payload.longitude,
+                latitude: payload.latitude,
                 propertyHTML: payload.propertyHTML,
                 propertyPhotoName: payload.propertyPhotoName,
                 photoURL: imageURL,
@@ -247,6 +250,9 @@ export const usePost = defineStore("post", () => {
         );
         updateDoc(docRef, {
           propertyTitle: payload.propertyTitle,
+          price: payload.price,
+          longitude: payload.longitude,
+          latitude: payload.latitude,
           propertyHTML: payload.propertyHTML,
           updatedAt: Date.now(),
         })

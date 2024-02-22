@@ -29,8 +29,8 @@ const menuHandler = () => {
         class="lg:-translate-y-4 -translate-y-0 lg:mt-0 mt-16 lg:pl-0 pl-3 flex lg:flex-row flex-col lg:items-center items-start lg:space-y-0 space-y-7 lg:space-x-6 space-x-0 lg:text-base text-slate-700 font-normal w-full h-full"
       >
         <li>
-          <RouterLink to="/property" class="px-3 py-2 hover:text-green-500"
-            >Property Listing</RouterLink
+          <a href="/property" class="px-3 py-2 hover:text-green-500"
+            >Property Listing</a
           >
         </li>
 
@@ -39,7 +39,6 @@ const menuHandler = () => {
             >Signin</RouterLink
           >
         </li>
-       
       </ul>
     </div>
     <div class="lg:hidden block" ref="toggleMenu">

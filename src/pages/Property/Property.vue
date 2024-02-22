@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, watchEffect, ref } from "vue";
-import { useHead } from "@unhead/vue";
+import { useHead } from "@unhead/vue"
 import L from "leaflet";
 import { useRoute } from "vue-router";
 import { usePost } from "../../store/features/post";
@@ -49,10 +49,10 @@ useHead({
     {
       name: post.state.propertyDetail[0]?.propertyTitle,
       content: post.state.propertyDetail[0]?.propertyHTML,
-      description: post.state.propertyDetail[0]?.propertyTitle,
-    },
-  ],
-});
+      description: post.state.propertyDetail[0]?.propertyTitle
+    }
+  ]
+})
 
 // const getLocation = () => {
 //   if (navigator.geolocation) {
@@ -73,7 +73,7 @@ const closeError = () => {
 </script>
 
 <template>
-  <main class="lg:pt-8 lg:pb-28 pt-6 pb-20 lg:px-16 sm:px-8 px-6">
+  <main class="font-SpaceGrotesk lg:pt-8 lg:pb-28 pt-6 pb-20 lg:px-16 sm:px-8 px-6">
     <div>
       <Loader v-if="post.state.loading" />
 
@@ -100,7 +100,7 @@ const closeError = () => {
             {{ post.state.propertyDetail[0]?.propertyTitle }}
           </h1>
           <h2 class="lg:text-3xl text-lg font-medium text-black mb-2">
-            Listing price: ₦ {{ post.state.propertyDetail[0]?.price }}
+            Listing price: ₦ {{ new Intl.NumberFormat("en-US").format(post.state.propertyDetail[0]?.price) }}
           </h2>
           <span class="lg:text-sm text-xs font-bold text-black">{{
             new Date(post.state.propertyDetail[0]?.updatedAt).toDateString()

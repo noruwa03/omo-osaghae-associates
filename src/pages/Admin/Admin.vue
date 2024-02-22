@@ -107,7 +107,10 @@ const delPost = (val: any) => {
                   :key="data.id"
                 >
                   <td className="w-64 text-start">
-                    <p className="font-medium">{{ data.propertyTitle }}</p>
+                    <p className="font-medium">
+                      {{ data.propertyTitle.slice(0, 25) }}
+                      <span v-if="data.propertyTitle.length >= 25"> ...</span>
+                    </p>
                   </td>
                   <td className="w-44 text-start text-[#737373]">
                     {{ new Date(data.createdAt).toDateString() }}

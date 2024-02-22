@@ -632,6 +632,22 @@ video {
   z-index: 50;
 }
 
+.z-\[\] {
+  z-index: ;
+}
+
+.z-\[25\] {
+  z-index: 25;
+}
+
+.z-\[300\] {
+  z-index: 300;
+}
+
+.z-\[900\] {
+  z-index: 900;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
